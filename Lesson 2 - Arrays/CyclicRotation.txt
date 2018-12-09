@@ -1,0 +1,16 @@
+class Solution {
+    public int[] solution(int[] A, int K) {
+        int pos = -1;
+        int result[] = new int[A.length];
+        for(int i=0;i<A.length;i++){
+            if(i+K>=A.length){
+                pos = (i+K)%A.length;
+            }else{
+                pos = i+K;
+            }
+            result[pos]=A[i];
+            pos = -1;
+        }
+        return result;
+    }
+}

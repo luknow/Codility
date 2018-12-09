@@ -1,0 +1,10 @@
+class Solution {
+    public int solution(int X, int Y, int D) {
+        int i = 0;
+        while(X<Y){
+         X = X+D; 
+         i++;
+        }
+         return i;
+    }
+}

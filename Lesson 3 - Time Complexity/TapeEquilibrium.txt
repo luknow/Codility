@@ -1,0 +1,18 @@
+import java.util.Arrays;
+
+class Solution {
+    public int solution(int[] A) {
+        int val = 0;
+        int sum = Arrays.stream(A).sum();
+        int temp = 0;
+        int min = 100000000;
+        for(int i=0;i<A.length-1;i++){
+            val += A[i];
+            temp = Math.abs(val - (sum-val));
+            if(temp<min){
+                min = temp;
+            }
+        }
+        return min;
+    }
+}

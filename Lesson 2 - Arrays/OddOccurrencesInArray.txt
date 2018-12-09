@@ -1,0 +1,19 @@
+class Solution {
+    public int solution(int[] A) {
+        int count = -1;
+        int odd = -1;
+        for(int i=0;i<A.length;i++){
+            for(int j=0;j<A.length;j++){
+                if(A[i]==A[j]){
+                    count++;
+                }
+            }
+            if(count==0){
+              odd = A[i];
+              break;
+            }
+            count = -1;
+        }
+        return odd;
+    }
+}

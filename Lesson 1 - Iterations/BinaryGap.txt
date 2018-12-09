@@ -1,0 +1,25 @@
+class Solution {
+    public int solution(int N) {
+        String binaryN = Integer.toBinaryString(N);
+        int count = 0;
+        int howManyOfOne = 0;
+        int result = 0;
+        for(int i=0;i<binaryN.length();i++){
+            if(binaryN.charAt(i)=='1'){
+               howManyOfOne++;
+            }
+            if(howManyOfOne == 1 && binaryN.charAt(i)=='0'){
+                count++;
+            }
+            if(howManyOfOne == 2){
+              howManyOfOne = 1;
+              if(count > result){
+                  result = count;
+              }
+              count = 0;
+            }
+            
+            }
+        return result;
+    }
+}

@@ -1,0 +1,16 @@
+class Solution {
+    public int solution(int A, int B, int K) {
+        int val = 0;
+        for(int i=A;i<=B;i++){
+            if(i%K==0){
+                val = i;
+                i = B;
+            }
+        }
+       int result = 0;
+       while(B > val+result*K){
+           result++;
+       }
+       return result;
+    }
+}
